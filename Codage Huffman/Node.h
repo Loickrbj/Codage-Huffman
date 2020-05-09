@@ -7,7 +7,7 @@ class CNode {
 private:
 	int proba;
 	std::string CodeHuffMan;
-	std::string lettre;
+	char lettre;
 	CNode* filsdroit;
 	CNode* filsgauche;
 
@@ -15,15 +15,15 @@ private:
 	
 
 public:
-	CNode(std::string lalettre, int lafrequence);
-	std::string Getlettre() { return lettre; }
+	CNode(char lalettre, int lafrequence);
+	char Getlettre() { return lettre; }
 	std::string GetCodeHuffMan() { return CodeHuffMan; }
-	void Setlettre(std::string new_lettre) { lettre = new_lettre; }
+	void Setlettre(char new_lettre) { lettre = new_lettre; }
 	void SetCodeHuffMan(std::string code){CodeHuffMan=code;}
 };
 
 
-CNode::CNode(std::string lalettre, int lafrequence)
+CNode::CNode(char lalettre, int lafrequence)
 {
 	lettre = lalettre;
 	proba = lafrequence;
