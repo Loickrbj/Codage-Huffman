@@ -139,7 +139,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="prog.cpp" />
-    <ClCompile Include="Codage Huffman.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h" />
