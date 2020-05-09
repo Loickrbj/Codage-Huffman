@@ -1,11 +1,33 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 #include "Node.h"
 using namespace std;
 
-#include <iostream>
-#include <list>
-#include "Node.h"
-using namespace std;
+string HuffMan(string Texte, string Alphabet) {
+	string codeHuffMan;
+	string Text_tab=Texte;
+	string alphabet = Alphabet;
+	vector<CNode> m_lstNode;
+	vector<int> Text_Compt;
+
+	/*for (size_t j = 0; j <= Text_tab.size()-1; j++) { //affichage de la liste 
+		cout << "char n°" << j << " : " << Text_tab[j] << endl;
+	}*/
+
+	for (size_t j = 0; j <= alphabet.size()-1; j++) { //affichage de la liste 
+		cout <<"/n"<< "char alphabet n°" << j << " : " << alphabet[j] << endl;
+		Text_Compt.push_back(count(Text_tab.begin(), Text_tab.end(), alphabet[j]));	
+	}
+	for(auto a : Text_Compt){
+		cout << a;
+	}
+
+
+
+	//m_lstNode.pushback(NewNode);
+	return codeHuffMan;
+}
 
 int main()
 {
@@ -15,26 +37,11 @@ int main()
 	cin >> Text;
 
 	string alphabet;
-	cout << "Entre ton alphabet : " << endl;
+	cout << "Entrez votre alphabet : " << endl;
 	cin >> alphabet;
 	//Reponse = HuffMan(Text, alphabet);
 	cout << "La phrase codee est : " << endl;
 	//cout<<Reponse;
+	HuffMan(Text,alphabet);
 }
 
-string HuffMan(string Texte, string Alphabet) {
-	string codeHuffMan;
-	list<string> Text_tab;
-	list<CNode> m_lstNode;
-
-	for (size_t i = 0; i <= Texte.size(); i++) {
-		Text_tab.push_back(Texte.substr(i));
-	}
-	for (size_t j = 0; j <= Text_tab.size(); j++) { //affichage de la liste 
-		cout << "char n°" << j << " : " << Text_tab[j] << endl;
-	}
-
-
-
-	//m_lstNode.pushback(NewNode);
-	return codeHuffMan;
