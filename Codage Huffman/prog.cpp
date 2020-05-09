@@ -11,21 +11,19 @@ string HuffMan(string Texte, string Alphabet) {
 	vector<CNode> m_lstNode;
 	vector<int> Text_Compt;
 
-	/*for (size_t j = 0; j <= Text_tab.size()-1; j++) { //affichage de la liste 
-		cout << "char n°" << j << " : " << Text_tab[j] << endl;
-	}*/
 
 	for (size_t j = 0; j <= alphabet.size()-1; j++) { //affichage de la liste 
 		cout <<"/n"<< "char alphabet n°" << j << " : " << alphabet[j] << endl;
 		Text_Compt.push_back(count(Text_tab.begin(), Text_tab.end(), alphabet[j]));	
 	}
+	sort(Text_Compt.begin(), Text_Compt.end());
 	for(auto a : Text_Compt){
 		cout << a;
 	}
+	
 
 
-
-	//m_lstNode.pushback(NewNode);
+	
 	return codeHuffMan;
 }
 

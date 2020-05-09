@@ -10,6 +10,8 @@ private:
 	std::string lettre;
 	CNode* filsdroit;
 	CNode* filsgauche;
+
+
 	
 
 public:
